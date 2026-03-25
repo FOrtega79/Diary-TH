@@ -11,5 +11,9 @@ web-build/
 *.mobileprovision
 *.orig.*
 web-build/
+# Firebase credentials (never commit these)
+GoogleService-Info.plist
+google-services.json
+
 # macOS
 .DS_Store
