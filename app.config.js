@@ -21,6 +21,7 @@ module.exports = ({ config }) => ({
       NSMicrophoneUsageDescription: 'Used to record audio diary entries',
       NSPhotoLibraryUsageDescription: 'Used to attach images to diary entries',
       NSCameraUsageDescription: 'Used to capture images for diary entries',
+      GADApplicationIdentifier: process.env.EXPO_PUBLIC_ADMOB_IOS_APP_ID || 'ca-app-pub-3940256099942544~1458002511',
     },
   },
   android: {
@@ -39,10 +40,6 @@ module.exports = ({ config }) => ({
     ['expo-image-picker', { photosPermission: 'Allow Therian Diary to access your photos for diary entries.' }],
     ['expo-av', { microphonePermission: 'Allow Therian Diary to record audio for diary entries.' }],
     ['expo-notifications', { icon: './assets/notification-icon.png', color: '#39FF8A', sounds: [] }],
-    ['react-native-google-mobile-ads', {
-      androidAppId: process.env.EXPO_PUBLIC_ADMOB_APP_ID || 'ca-app-pub-3940256099942544~3347511713',
-      iosAppId:     process.env.EXPO_PUBLIC_ADMOB_APP_ID || 'ca-app-pub-3940256099942544~1458002511',
-    }],
     ['expo-build-properties', { android: { minSdkVersion: 24 } }],
   ],
   experiments: { typedRoutes: true },
