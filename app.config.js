@@ -22,6 +22,7 @@ module.exports = ({ config }) => ({
       NSPhotoLibraryUsageDescription: 'Used to attach images to diary entries',
       NSCameraUsageDescription: 'Used to capture images for diary entries',
       GADApplicationIdentifier: process.env.EXPO_PUBLIC_ADMOB_IOS_APP_ID || 'ca-app-pub-3940256099942544~1458002511',
+      ITSAppUsesNonExemptEncryption: false,
     },
   },
   android: {
