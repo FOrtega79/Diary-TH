@@ -16,7 +16,7 @@ module.exports = ({ config }) => ({
   ios: {
     supportsTablet: false,
     bundleIdentifier: 'com.therianDiary.app',
-    googleServicesFile: './GoogleService-Info.plist',
+    googleServicesFile: process.env.GOOGLE_SERVICES_PLIST || './GoogleService-Info.plist',
     infoPlist: {
       NSMicrophoneUsageDescription: 'Used to record audio diary entries',
       NSPhotoLibraryUsageDescription: 'Used to attach images to diary entries',
